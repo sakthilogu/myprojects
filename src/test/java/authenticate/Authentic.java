@@ -18,7 +18,7 @@ public class Authentic {
 		//loadObjects();
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\workspace\\authenticate\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\drivers\\chromedriver.exe");
 		driver = (WebDriver) new ChromeDriver(options);
 		driver.get("https://www.facebook.com");
 		driver.manage().window().maximize();
