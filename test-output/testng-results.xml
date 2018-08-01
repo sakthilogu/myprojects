@@ -2,16 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="35184" started-at="2018-08-01T06:52:53Z" finished-at="2018-08-01T06:53:28Z">
+  <suite name="Testcheck" duration-ms="24610" started-at="2018-08-01T07:37:45Z" finished-at="2018-08-01T07:38:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="35184" started-at="2018-08-01T06:52:53Z" finished-at="2018-08-01T06:53:28Z">
+    <test name="Test1" duration-ms="24610" started-at="2018-08-01T07:37:45Z" finished-at="2018-08-01T07:38:10Z">
       <class name="authenticate.Authentic">
-        <test-method status="PASS" signature="launchBrowserr()[pri:0, instance:authenticate.Authentic@7f674d]" name="launchBrowserr" duration-ms="35156" started-at="2018-08-01T12:22:53Z" finished-at="2018-08-01T12:23:28Z">
+        <test-method status="PASS" signature="launchBrowserr()[pri:0, instance:authenticate.Authentic@1e4cb85]" name="launchBrowserr" duration-ms="23738" started-at="2018-08-01T13:07:45Z" finished-at="2018-08-01T13:08:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowserr -->
+        <test-method status="PASS" signature="logout()[pri:0, instance:authenticate.Authentic@1e4cb85]" name="logout" is-config="true" duration-ms="804" started-at="2018-08-01T13:08:09Z" finished-at="2018-08-01T13:08:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
       </class> <!-- authenticate.Authentic -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Testcheck -->
 </testng-results>
