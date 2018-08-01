@@ -4,16 +4,16 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Listeners;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import utilities.DataInputProvider;
 
 
 
@@ -28,8 +28,8 @@ public class Authentic   {
 	
 	}
 
-	@Test
-	public void launchBrowserr() throws FileNotFoundException, IOException {
+	@Test(dataProvider="fetchData")
+	public void launchBrowserr(String name,String pass) throws FileNotFoundException, IOException {
 try
 {
 		re.startTestCase();
@@ -42,6 +42,7 @@ try
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		re.reportStep(driver,"end of test", "PASS");
+		System.out.println("name is"+name+"pwd is"+pass);
 		
 }
 catch(Exception e)
@@ -65,5 +66,10 @@ catch(Exception e)
 	
 	}
 	
+	@DataProvider(name="fetchData")
+	public Object[][] getData(){
+		return DataInputProvider.getSheet("login");		
+	}
+
 	
 }
