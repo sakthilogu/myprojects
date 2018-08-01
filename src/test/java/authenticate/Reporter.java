@@ -1,28 +1,31 @@
-package utils;
+package authenticate;
 
 import java.io.File;
 import java.io.IOException;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
-import wrappers.OpentapsWrappers;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 
-public class Reporter implements IReporter{
+public class Reporter   {
 	
 	
-	private static ExtentTest test;
-	private static ExtentReports extent;
+	public static ExtentTest test;
+	public static ExtentReports extent;
 
-	public static void reportStep(String desc, String status) {
+	public static void reportStep( RemoteWebDriver driver,String desc, String status) {
 
 		long number = (long) Math.floor(Math.random() * 900000000L) + 10000000L;
         try {
-			FileUtils.copyFile(driver.getScreenshotAs(OutputType.FILE) , new File("./reports/images/"+number+".jpg"));
+        	File snaps=driver.getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(snaps , new File("./reports/images/"+number+".jpg"));
 		} catch (WebDriverException | IOException e) {
 			e.printStackTrace();
 		}
@@ -40,12 +43,12 @@ public class Reporter implements IReporter{
 
 	
 	public static void startResult(){
-		extent = new ExtentReports("./reports/result.html", false);
+		extent = new ExtentReports("./reports/result.html", true);
 		extent.loadConfig(new File("./extent-config.xml"));
 	}
 	
 	public static void startTestCase(){
-		test = extent.startTest(testCaseName, testDescription);
+		test = extent.startTest("1", "2");
 	}
 
 	public static void endResult(){

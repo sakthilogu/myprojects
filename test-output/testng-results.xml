@@ -2,19 +2,27 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Testcheck" duration-ms="20555" started-at="2018-08-01T10:18:48Z" finished-at="2018-08-01T10:19:08Z">
+  <suite name="Testcheck" duration-ms="15876" started-at="2018-08-01T11:31:26Z" finished-at="2018-08-01T11:31:42Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="20555" started-at="2018-08-01T10:18:48Z" finished-at="2018-08-01T10:19:08Z">
+    <test name="Test1" duration-ms="15876" started-at="2018-08-01T11:31:26Z" finished-at="2018-08-01T11:31:42Z">
       <class name="authenticate.Authentic">
-        <test-method status="PASS" signature="launchBrowserr()[pri:0, instance:authenticate.Authentic@13afe78]" name="launchBrowserr" duration-ms="19555" started-at="2018-08-01T15:48:48Z" finished-at="2018-08-01T15:49:07Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:authenticate.Authentic@4a765]" name="beforeSuite" is-config="true" duration-ms="231" started-at="2018-08-01T17:01:26Z" finished-at="2018-08-01T17:01:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="launchBrowserr()[pri:0, instance:authenticate.Authentic@4a765]" name="launchBrowserr" duration-ms="15134" started-at="2018-08-01T17:01:26Z" finished-at="2018-08-01T17:01:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowserr -->
-        <test-method status="PASS" signature="logout()[pri:0, instance:authenticate.Authentic@13afe78]" name="logout" is-config="true" duration-ms="968" started-at="2018-08-01T15:49:07Z" finished-at="2018-08-01T15:49:08Z">
+        <test-method status="PASS" signature="logout()[pri:0, instance:authenticate.Authentic@4a765]" name="logout" is-config="true" duration-ms="719" started-at="2018-08-01T17:01:41Z" finished-at="2018-08-01T17:01:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:authenticate.Authentic@4a765]" name="afterSuite" is-config="true" duration-ms="687" started-at="2018-08-01T17:01:42Z" finished-at="2018-08-01T17:01:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
       </class> <!-- authenticate.Authentic -->
     </test> <!-- Test1 -->
   </suite> <!-- Testcheck -->
